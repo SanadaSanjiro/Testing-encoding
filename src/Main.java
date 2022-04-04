@@ -3,13 +3,18 @@ import java.nio.charset.Charset;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+//This is demo prog form Kumar Chandrakant's article Guide to Character Encoding
+//Code listed in this article doesn't shows described results, so I have edit it a litlle...
+
 public class Main {
-    static String LINE = "語"; //Строка символов для преобразования в двоичный код
-    static String ENCODING = "UTF-32"; //Кодировка из списка Charset: Big5, US-ASCII, UTF-32, UTF-8
+    //Строка символов для преобразования в двоичный код
+    static String LINE = "語"; //Put symbols string there
+    //Кодировка из списка Charset: Big5, US-ASCII, UTF-32, UTF-8 и т.д.
+    static String ENCODING = "UTF-32"; //Put character set here. Charset: Big5, US-ASCII, UTF-32, UTF-8 etc
 
     public static void main(String[] args) {
         try {
-            System.out.println(LINE + " в кодироке " + ENCODING+ " в двоичном коде:");
+            System.out.println(LINE + " in charset " + ENCODING+ " converted to binary code:");
             System.out.println(convertToBinary(LINE, ENCODING));
         }
         catch (UnsupportedEncodingException e) {
